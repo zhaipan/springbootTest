@@ -15,4 +15,13 @@ public class TestController {
     public  String home(@RequestParam String name){
         return "hi"+name+",i am from port:"+port;
     }
+
+    @Value("${foo}")
+    String foo;
+
+    @RequestMapping("/hihi")
+    public String hi(){
+        return foo;
+    }
+
 }
